@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -27,17 +28,35 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>ummc</title>
   <link rel="manifest" href="manifest.json">
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js"></script>
 </head>
+
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+  
+ 
   <script>
-    var serviceWorkerVersion = '377745769';
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyA282vx5ZhdZwPtxhKSzCNfx5Zi5LJXGfs",
+      authDomain: "ummccareshiv.firebaseapp.com",
+      projectId: "ummccareshiv",
+      storageBucket: "ummccareshiv.appspot.com",
+      messagingSenderId: "722672967447",
+      appId: "1:722672967447:web:4e7e56a27b490fa5676152"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script>
+    var serviceWorkerVersion = '1724846794';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -100,5 +119,13 @@
       loadMainDartJs();
     }
   </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load',function () {
+        navigator.serviceWorker.register('/firebase-messaging-sw.js');
+      });
+    }
+  </script>
 </body>
+
 </html>
