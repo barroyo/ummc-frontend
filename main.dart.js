@@ -102649,7 +102649,7 @@ n=A.Y0(new A.b5(f,100,A.io("assets/images/logo_splash.svg","logo splash"),f),"lo
 m=A.a8("Welcome",f,f,f,A.al(f,f,A.a1(f,f,B.w,f,f,f,f,f,f,f,f,20,f,B.A,f,f,!0,f,f,f,f,f,f,f,f)),f,f,f)
 l=A.a8("Sign in to continue",f,f,f,A.al(f,f,A.a1(f,f,B.B,f,f,f,f,f,f,f,f,11,f,B.A,f,f,!0,f,f,f,f,f,f,f,f)),f,f,f)
 k=b.q(p).f.a.a<=950?b.q(p).f.a.a*0.6:b.q(p).f.a.a*0.3
-k=A.t(f,g.yU("Username *"),B.e,f,f,f,f,f,f,B.Q,f,f,f,k)
+k=A.t(f,g.yU("Email address *"),B.e,f,f,f,f,f,f,B.Q,f,f,f,k)
 j=b.q(p).f.a.a<=950?b.q(p).f.a.a*0.6:b.q(p).f.a.a*0.3
 j=A.t(f,g.yV("Password *"),B.e,f,f,f,f,f,f,B.Q,f,f,f,j)
 i=b.q(p).f.a.a<=950?b.q(p).f.a.a*0.6:b.q(p).f.a.a*0.3
@@ -102695,7 +102695,7 @@ r=A.fK(n,A.fY(n,B.aq,n,n,n,n,n,n,!0,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,
 m=o.c.q(m).f
 q=o.x?o.cx:""
 p=t.p
-return A.bV(B.P,A.b([k,j,A.t(n,A.av(A.b([r,A.t(n,A.a8(q,n,n,n,A.f2(A.a1(n,n,B.F,n,n,n,n,n,n,n,n,10,n,B.J,n,n,!0,n,n,n,n,n,n,n,n)),n,n,n),B.e,n,n,n,n,n,n,B.bB,n,n,n,m.a.a)],p),B.k,B.r,B.l,n,B.q),B.e,B.v,n,n,n,67.3,n,B.be,n,n,n,s.a.a)],p),B.D,B.N,n,n)},
+return A.bV(B.P,A.b([k,j,A.t(n,A.av(A.b([r,A.t(n,A.a8(q,n,n,n,A.f2(A.a1(n,n,B.F,n,n,n,n,n,n,n,n,10,n,B.J,n,n,!0,n,n,n,n,n,n,n,n)),n,n,n),B.e,n,n,n,n,n,n,B.bB,n,n,n,m.a.a)],p),B.k,B.r,B.l,n,B.q),B.e,B.v,n,n,n,73,n,B.be,n,n,n,s.a.a)],p),B.D,B.N,n,n)},
 aHm(){var s=this.c
 s.toString
 A.aY3(!1,new A.aMa(this),s,t.H)},
@@ -103381,7 +103381,7 @@ o=j.c.q(h).f
 n=j.x
 m=n?98:73
 l=n?B.di:A.dj(i,i,i,i,i,B.tv,i,new A.aQi(),B.V,i,u.L)
-l=A.fK(i,A.fY(i,B.aq,i,i,i,i,i,i,!0,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,!1,i,i,A.al(i,i,A.a1(i,i,n?B.F:B.B,i,i,i,i,i,i,i,i,11,i,B.J,i,i,!0,i,i,i,i,i,i,i,i)),a,i,i,i,i,i,i,i,i,l,i,i,i,i),i,i,B.aS,1,i,!1,new A.aQj(j,s),i,i,new A.aQk(j))
+l=A.fK(i,A.fY(i,B.aq,i,i,i,i,i,i,!0,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,!1,i,i,A.al(i,i,A.a1(i,i,n?B.F:B.B,i,i,i,i,i,i,i,i,11,i,B.J,i,i,!0,i,i,i,i,i,i,i,i)),a,i,i,i,i,i,i,i,i,l,i,i,i,i),i,i,B.aS,1,i,!0,new A.aQj(j,s),i,i,new A.aQk(j))
 h=j.c.q(h).f
 n=j.x?j.cy:""
 k=t.p
@@ -103397,7 +103397,7 @@ p=A.t(j,j,B.e,j,j,new A.ao(B.v,j,new A.b9(B.p,B.p,new A.bq(k.y?B.F:B.w,2,B.L),B.
 o=k.c.q(i).f
 n=k.y
 m=n?B.di:j
-m=A.fK(j,A.fY(j,B.aq,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!1,j,j,A.al(j,j,A.a1(j,j,n?B.F:B.B,j,j,j,j,j,j,j,j,11,j,B.J,j,j,!0,j,j,j,j,j,j,j,j)),a,j,j,j,j,j,j,j,j,m,j,j,j,j),j,j,B.aS,1,j,!1,new A.aQd(k,s),j,j,new A.aQe(k))
+m=A.fK(j,A.fY(j,B.aq,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!1,j,j,A.al(j,j,A.a1(j,j,n?B.F:B.B,j,j,j,j,j,j,j,j,11,j,B.J,j,j,!0,j,j,j,j,j,j,j,j)),a,j,j,j,j,j,j,j,j,m,j,j,j,j),j,j,B.aS,1,j,!0,new A.aQd(k,s),j,j,new A.aQe(k))
 i=k.c.q(i).f
 n=k.y?k.db:""
 l=t.p
@@ -106120,7 +106120,7 @@ A.aHV.prototype={
 $1(a){return B.jS},
 $S:120}
 A.aHW.prototype={
-$1(a){var s,r,q=null,p=A.a8("INACTIVE CHAT",q,q,q,A.al(q,q,A.a1(q,q,B.w,q,q,q,q,q,q,q,q,15,q,B.G,q,q,!0,q,q,q,q,q,q,q,q)),q,q,q),o=A.a1(q,q,B.H,q,q,q,q,q,q,q,q,36,q,q,q,q,!0,q,q,q,q,q,q,q,q),n=A.dz(q,q,q,A.al(q,q,A.a1(q,q,B.w,q,q,q,q,q,q,q,q,13,q,B.A,q,q,!0,q,q,q,q,q,q,q,q)),"Chat functionality is currently not active. If you would like to contact HIV CARES. \n "),m=A.dz(q,q,q,A.al(q,q,A.a1(q,q,B.w,q,q,q,q,q,q,q,q,13,q,B.A,q,q,!0,q,q,q,q,q,q,q,q)),"Please call us "),l=A.x8(q)
+$1(a){var s,r,q=null,p=A.a8("INACTIVE CHAT",q,q,q,A.al(q,q,A.a1(q,q,B.w,q,q,q,q,q,q,q,q,15,q,B.G,q,q,!0,q,q,q,q,q,q,q,q)),q,q,q),o=A.a1(q,q,B.H,q,q,q,q,q,q,q,q,36,q,q,q,q,!0,q,q,q,q,q,q,q,q),n=A.dz(q,q,q,A.al(q,q,A.a1(q,q,B.w,q,q,q,q,q,q,q,q,13,q,B.A,q,q,!0,q,q,q,q,q,q,q,q)),"Chat functionality is currently not active. If you would like to contact HIV CARES, \n "),m=A.dz(q,q,q,A.al(q,q,A.a1(q,q,B.w,q,q,q,q,q,q,q,q,13,q,B.A,q,q,!0,q,q,q,q,q,q,q,q)),"please call us "),l=A.x8(q)
 l.ab=new A.aHS()
 l=A.dz(q,q,l,A.al(q,q,A.a1(q,q,B.aF,q,q,q,q,q,q,q,q,14,q,B.A,q,q,!0,q,q,q,q,q,q,q,q)),"(601) 815-5861 ")
 s=A.dz(q,q,q,A.al(q,q,A.a1(q,q,B.w,q,q,q,q,q,q,q,q,13,q,B.A,q,q,!0,q,q,q,q,q,q,q,q)),"\nor \nemail us ")
