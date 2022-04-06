@@ -106197,10 +106197,11 @@ s=1
 break}case 1:return A.p(q,r)}})
 return A.q($async$Au,r)}}
 A.aiz.prototype={
-$1(a){var s,r=J.S(a)
-if(J.h(r.h(a,"role"),"coordinator")){s=A.zf(r.h(a,"lastActivityTimestamp"))
-if(B.f.bN(A.by(0,A.zf(J.u(this.a,"createdOn")).a-s.a).a,6e7)>=30)return!0
-return!1}return!1},
+$1(a){var s,r,q,p,o=J.S(a)
+if(J.h(o.h(a,"role"),"coordinator")){try{s=A.zf(o.h(a,"lastActivityTimestamp"))
+r=A.zf(J.u(this.a,"createdOn"))
+q=A.by(0,r.a-s.a)
+if(B.f.bN(q.a,6e7)>=30)return!0}catch(p){return!1}return!1}return!1},
 $S:14}
 A.kn.prototype={
 Fm(a,b,c){return this.aJD(a,b,c)},
