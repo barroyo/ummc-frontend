@@ -104286,31 +104286,29 @@ q=A.u(j,A.dY(!0,A.bO(B.N,A.b([A.AG(A.b([B.c7,A.u(j,A.dS(B.bo,l),B.e,j,j,new A.as
 g=i.Q==="admin"?B.bB:B.bC
 return new A.fM("UMMC",B.F,A.f8(h,j,new A.rH("Loading Chat...",q,s,j),B.bG,g,!1,B.bJ,B.bH,j),j)},
 azY(){return A.k_(this.f,new A.aLA(this),this.r.length,null,B.ce,B.E,!0)},
-aAs(a){var s,r,q,p,o,n,m,l=this,k=null,j=l.c
-j.toString
-s=A.bm(j,!1,t.g)
+aAs(a){var s,r,q,p,o,n,m=this,l=null,k=m.c
+k.toString
+s=A.bm(k,!1,t.g)
 r=A.Wr("MM/dd/yyyy hh:mma").jS(0,A.mQ(new A.cF(Date.now(),!1).j(0)))
-j=t.w
-q=l.c.q(j).f
-p=s.fy
-o=A.Y(p).i("ar<1>")
-n=new A.ar(p,new A.aLN(a),o)
-if(!n.gS(n)){p=new A.ar(p,new A.aLO(a),o)
-p=p.gM(p).gl3()>0&&!0}else p=!1
-p=A.b4w(A.aa("",k,k,k,A.a3(k,k,B.i,k,k,k,k,k,k,k,k,k,k,k,k,k,!0,k,k,k,k,k,k,k,k),k,k,k),A.uJ(A.u(k,B.SN,B.e,B.R,k,k,k,34,k,k,k,k,k,34)),p)
-j=l.c.q(j).f
-o=a.b
-o=A.aa(o,k,k,k,A.al(k,k,A.a3(k,k,B.C,k,k,k,k,k,k,k,k,11,k,B.ah,k,k,!0,k,k,k,k,k,k,k,k)),k,k,k)
-if(s.k4===a.r){n=s.k3
-n=n.length!==0?n:a.c}else if(J.yr(l.y))if(J.h(J.t(B.v.co(0,J.t(l.y,"sender"),k),"communicationUserId"),a.r))n=J.t(B.v.co(0,J.t(l.y,"content"),k),"message")
-else n=a.c
-else n=a.c
-m=t.p
-j=A.u(k,A.bq(A.b([p,A.c0(A.u(k,A.ac(A.b([o,A.aa(n,k,B.bl,k,A.al(k,k,A.a3(k,k,B.C,k,k,k,k,k,k,k,k,10,k,B.D,k,k,!0,k,k,k,k,k,k,k,k)),k,k,k)],m),B.d5,B.aF,B.j,k,B.p),B.e,k,k,k,k,k,k,B.hF,k,k,k,j.a.a*0.52),k,k,k)],m),B.k,B.r,B.j),B.e,k,k,k,k,k,k,B.hG,k,k,k,k)
-p=J.h(a.d.split(" ")[0],r.split(" ")[0])
-o=a.d
-p=p?o.split(" ")[1]:o.split(" ")[0]
-return A.bd(k,A.u(k,A.bq(A.b([j,A.u(k,A.ac(A.b([A.aa(p,k,k,k,A.hk(A.a3(k,k,B.C,k,k,k,k,k,k,k,k,10,k,B.D,k,k,!0,k,k,k,k,k,k,k,k)),k,k,k)],m),B.k,B.aF,B.j,k,B.p),B.e,k,k,k,k,k,k,B.t_,k,k,k,k)],m),B.k,B.X,B.j),B.e,k,k,B.jF,k,62,k,k,k,k,k,q.a.a),B.z,!1,k,k,k,k,k,k,k,k,k,k,k,k,new A.aLP(l,s,a),k,k,k,k,k,k)}}
+k=m.c.q(t.w).f
+q=s.fy
+p=A.Y(q).i("ar<1>")
+o=new A.ar(q,new A.aLN(a),p)
+if(!o.gS(o)){q=new A.ar(q,new A.aLO(a),p)
+q=q.gM(q).gl3()>0&&!0}else q=!1
+q=A.b4w(A.aa("",l,l,l,A.a3(l,l,B.i,l,l,l,l,l,l,l,l,l,l,l,l,l,!0,l,l,l,l,l,l,l,l),l,l,l),A.uJ(A.u(l,B.SN,B.e,B.R,l,l,l,34,l,l,l,l,l,34)),q)
+p=a.b
+p=A.aa(p,l,l,l,A.al(l,l,A.a3(l,l,B.C,l,l,l,l,l,l,l,l,11,l,B.ah,l,l,!0,l,l,l,l,l,l,l,l)),l,l,l)
+if(s.k4===a.r){o=s.k3
+o=o.length!==0?o:a.c}else if(J.yr(m.y))if(J.h(J.t(B.v.co(0,J.t(m.y,"sender"),l),"communicationUserId"),a.r))o=J.t(B.v.co(0,J.t(m.y,"content"),l),"message")
+else o=a.c
+else o=a.c
+n=t.p
+o=A.u(l,A.bq(A.b([q,A.c0(A.u(l,A.ac(A.b([p,A.aa(o,l,B.bl,l,A.al(l,l,A.a3(l,l,B.C,l,l,l,l,l,l,l,l,10,l,B.D,l,l,!0,l,l,l,l,l,l,l,l)),l,l,l)],n),B.d5,B.aF,B.j,l,B.p),B.e,l,l,l,l,l,l,B.hF,l,l,l,200),l,l,l)],n),B.k,B.r,B.j),B.e,l,l,l,l,l,l,B.hG,l,l,l,l)
+q=J.h(a.d.split(" ")[0],r.split(" ")[0])
+p=a.d
+q=q?p.split(" ")[1]:p.split(" ")[0]
+return A.bd(l,A.u(l,A.bq(A.b([o,A.u(l,A.ac(A.b([A.aa(q,l,l,l,A.hk(A.a3(l,l,B.C,l,l,l,l,l,l,l,l,10,l,B.D,l,l,!0,l,l,l,l,l,l,l,l)),l,l,l)],n),B.k,B.aF,B.j,l,B.p),B.e,l,l,l,l,l,l,B.t_,l,l,l,l)],n),B.k,B.X,B.j),B.e,l,l,B.jF,l,62,l,l,l,l,l,k.a.a),B.z,!1,l,l,l,l,l,l,l,l,l,l,l,l,new A.aLP(m,s,a),l,l,l,l,l,l)}}
 A.aLR.prototype={
 $1(a){var s=this.a
 s.G(new A.aLQ(s,a))
