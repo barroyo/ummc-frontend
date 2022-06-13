@@ -29486,6 +29486,7 @@ _.dx=""
 _.dy=!1
 _.fy=_.fx=""
 _.go=null
+_.k1=""
 _.y1$=0
 _.y2$=b
 _.aA$=_.al$=0
@@ -105363,13 +105364,17 @@ break}s=$.b4k()
 new A.cW(s,A.m(s).i("cW<1>")).hV(new A.aLx(r))},
 $S:4}
 A.aLx.prototype={
-$1(a){var s=this.a,r=s.c
+$1(a){var s,r=this.a,q=r.c
+q.toString
+s=A.bs(q,!1,t.g)
+if(s.a.length===0){r=r.c
 r.toString
-r=A.bs(r,!1,t.g).a
-s=s.c
-if(r.length===0){s.toString
-A.dy(!0,new A.aLv(),s,t.H)}else{s.toString
-A.uo(new A.aLw(),s,!1,t.z)}},
+A.dy(!0,new A.aLv(),r,t.H)}else{q=J.U(a)
+if(s.k1!==q.h(a,"id")){s.k1=q.h(a,"id")
+s.I()
+r=r.c
+r.toString
+A.uo(new A.aLw(),r,!1,t.z)}}},
 $S:16}
 A.aLv.prototype={
 $1(a){return new A.db("WARNING","You must be logged in to start a chat",A.af(A.b([A.dj(B.S,B.j,12,B.u,new A.aLu(a),36,"OK",a.t(t.w).f.a.a)],t.p),B.l,B.t,B.k,null,B.q),null)},
