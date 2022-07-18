@@ -5,11 +5,10 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "b444891081f7bd946c064e7a10c2322a",
 "icon.png": "5732bc9a0d0ec1944fae55bd835ba947",
-"index.html": "69311c1183406f244883d9c1b70350c2",
-"/": "69311c1183406f244883d9c1b70350c2",
+"index.html": "688b0a93229674a25bf6e8ac8b178cb1",
+"/": "688b0a93229674a25bf6e8ac8b178cb1",
 "firebase-messaging-sw.js": "d6c4e6ba766a9cc188d27bb7e4f96445",
-"main.dart.js": "97bee41a7a8c3298a1fcf1881570ba9f",
-"flutter.js": "0816e65a103ba8ba51b174eeeeb2cb67",
+"main.dart.js": "4782b1cc225f00b1de26ced431c5240c",
 "favicon.png": "0fe38434e2598b61d489824b6e69896b",
 "icons/Icon-192.png": "5732bc9a0d0ec1944fae55bd835ba947",
 "icons/Icon-maskable-192.png": "5732bc9a0d0ec1944fae55bd835ba947",
@@ -17,7 +16,7 @@ const RESOURCES = {
 "icons/Icon-512.png": "5732bc9a0d0ec1944fae55bd835ba947",
 "manifest.json": "58775449cd0a8712810bcd19269d8803",
 "Archive.zip": "068bebf5f94f2eba0c0889dbee87ee0a",
-"assets/AssetManifest.json": "f0fa22c2bc64136ef41d2528b560ae88",
+"assets/AssetManifest.json": "ce3dab7dcc72af313fe51b71215f22a6",
 "assets/NOTICES": "b7245dc7d3588cff5170312e7212dcfa",
 "assets/FontManifest.json": "2fe33702e0094d596583a78378983811",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
@@ -30,12 +29,10 @@ const RESOURCES = {
 "assets/assets/images/prep_item.png": "d3064bae445f1d46b825e201d6319463",
 "assets/assets/images/logo_splash.png": "5b25f048e71a028c3d654e827245183f",
 "assets/assets/images/logo_app_bar.svg": "92c29ff4a7701459e1542371a4cc3aeb",
+"assets/assets/images/logo_splash1.svg": "c4f11fd6c53d5826b124c1e39587efba",
+"assets/assets/images/logo_app_bar2.svg": "4547112ed318af59df3347c04e787514",
 "assets/assets/images/treatment_item.png": "ffcf3cb8c23a6131a32914e38f49e49b",
-"assets/assets/fonts/montserrat/Montserrat-SemiBold.ttf": "7ffeec2b4edb434d393875ffbe633c30",
-"canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
-"canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
-"canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
-"canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba"
+"assets/assets/fonts/montserrat/Montserrat-SemiBold.ttf": "7ffeec2b4edb434d393875ffbe633c30"
 };
 
 // The application shell files that are downloaded before a service worker can
