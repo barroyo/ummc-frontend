@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+​
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+​
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ummc">
+    <link rel="apple-touch-icon" href="https://jolly-island-00d2f1810.1.azurestaticapps.net/icons/Icon-192.png">
+​
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://jolly-island-00d2f1810.1.azurestaticapps.net/favicon.png">
+    <title>UMMC - Email verification</title>
+    <meta name="description" content="">
+    <meta name="apple-itunes-app"
+        content="app-id=375380948, app-argument=https://apps.apple.com/us/app/department-of-surgery-at-ummc/id1515987544">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .outer {
+            display: table;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            --tw-bg-opacity: 1;
+            background-color: #d9ebfb;
+        }
+​
+        .middle {
+            display: table-cell;
+            vertical-align: middle;
+        }
+​
+        .inner {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            padding: 10px;
+            background-color: white;
+            border-radius: 16px;
+            --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+​
+        @media only screen and (max-width: 600px) {
+            .inner {
+                width: 80%;
+            }
+        }
+​
+        .center-img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            margin-bottom: 15px;
+        }
+​
+        .font-style {
+            font-size: 18px;
+            font-family: system-ui;
+            text-align: justify;
+            color: #8e8e8e;
+        }
+​
+        .font-style a {
+            color: #184f98;
+            font-weight: bold;
+        }
+​
+        .circle {
+            position: relative;
+            background: #64ce74;
+            border-radius: 50%;
+            width: 27px;
+            height: 25px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+​
+        .circle-error {
+            position: relative;
+            background: #f76;
+            border-radius: 50%;
+            width: 27px;
+            height: 25px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+​
+        .checkmark {
+            position: absolute;
+            transform: rotate(45deg) translate(-50%, -50%);
+            left: 35%;
+            top: 45%;
+            height: 8px;
+            width: 3px;
+            border-bottom: 3px solid white;
+            border-right: 3px solid white;
+        }
+​
+        .checkmark-error {
+            position: absolute;
+            transform: rotate(0deg) translate(-50%, -50%);
+            left: 49%;
+            top: 50%;
+            height: 0px;
+            width: 15px;
+            border-bottom: 3px solid white;
+            border-right: 3px solid white;
+        }
+​
+        .loading-overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            top: 0;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 9998;
+        }
+​
+        .lds-dual-ring {
+            display: flex;
+            margin: 0 auto;
+        }
+​
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            border-color: #173f88 transparent #173f88 transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+​
+        @keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+​
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+​
+        .hidden {
+            display: none;
+        }
+​
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+​
+<body>
+​
+    <div id="loading" class="loading-overlay hidden">
+        <div class="lds-dual-ring"></div>
+    </div>
+​
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+                <img src="https://umclegacy.org/org_files/4411/logos/logo.png" class="center-img" />
+​
+                <div id="successfully-content" class="hidden">
+                    <div class="circle">
+                        <div class="checkmark"></div>
+                    </div>
+​
+                    <p class="font-style">Thank you! You have successfully verified your email. For an optimal
+                        experience,
+                        we recommend using
+                        either the android
+                        or iOS app to access the HIV CARES application. However, you can also click <a
+                            href="https://jolly-island-00d2f1810.1.azurestaticapps.net/#/">here</a> to access the
+                        website
+                        instead.
+                    </p>
+                </div>
+​
+                <div id="failed-content" class="hidden">
+                    <div class="circle-error">
+                        <div class="checkmark-error"></div>
+                    </div>
+​
+                    <p class="font-style">Sorry, email verification failed. you may need to request another
+                        verification email.</p>
+​
+                </div>
+                <!-- <div id="device-app"></div> -->
+            </div>
+        </div>
+    </div>
+    <script>
+        /**
+         * Page setting
+         */
+        var apiUrl = 'https://ummcapi.azurewebsites.net';
+​
+        /*****************************************/
+​
+        /**
+         * Determine the mobile operating system.
+         * This function returns one of 'iOS', 'Android' or 'unknown'.
+         *
+         * @returns {String}
+         */
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+​
+            if (/android/i.test(userAgent)) {
+                return "Android";
+            }
+​
+            // iOS detection from: http://stackoverflow.com/a/9039885/177710
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return "iOS";
+            }
+​
+            return "";
+        }
+​
+        /**
+         * Show result div
+         *
+         */
+        function showResult(element, className) {
+            element.setAttribute("class", className);
+        }
+​
+        /**
+         * Show result div
+         *
+         */
+        function showLoading(show) {
+            var element = document.getElementById("loading");
+            show ? element.classList.remove("hidden") : element.classList.add("hidden");
+        }
+​
+​
+        (async function () {
+            const deviceAppElement = document.getElementById('device-app');
+            if (deviceAppElement) {
+                deviceAppElement.innerHTML = getMobileOperatingSystem();
+            }
+​
+            // Get query params
+            const params = new Proxy(new URLSearchParams(window.location.search), {
+                get: (searchParams, prop) => searchParams.get(prop),
+            });
+​
+            let tokenValue = params.token;
+            if (tokenValue) {
+​
+                try {
+                    showLoading(true);
+                    const verifyEmailEndpoint = apiUrl + '/v1/auth/verify-email?' + new URLSearchParams({
+                        token: tokenValue
+                    });
+​
+                    const result = await fetch(verifyEmailEndpoint, { method: 'POST' });
+                    if (result.status === 200 || result.status === 204) {
+                        const successfullyElement = document.getElementById('successfully-content');
+                        const failedElement = document.getElementById('failed-content');
+                        showResult(successfullyElement, 'show');
+                        showResult(failedElement, 'hidden');
+                        showLoading(false);
+                    }
+                    else {
+                        const successfullyElement = document.getElementById('successfully-content');
+                        const failedElement = document.getElementById('failed-content');
+                        showResult(successfullyElement, 'hidden');
+                        showResult(failedElement, 'show');
+                        showLoading(false);
+                    }
+                } catch (error) {
+                    console.log(error);
+                    const successfullyElement = document.getElementById('successfully-content');
+                    const failedElement = document.getElementById('failed-content');
+                    showResult(successfullyElement, 'hidden');
+                    showResult(failedElement, 'show');
+                    showLoading(false);
+                }
+            }
+            else {
+                const successfullyElement = document.getElementById('successfully-content');
+                const failedElement = document.getElementById('failed-content');
+                showResult(successfullyElement, 'hidden');
+                showResult(failedElement, 'show');
+                showLoading(false);
+            }
+        })();
+​
+​
+    </script>
+</body>
+​
+</html>
