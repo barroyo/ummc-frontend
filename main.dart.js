@@ -98288,7 +98288,7 @@ o=A.dE(A.ad(A.b([B.a9I,i,B.aA,A.u(k,A.ad(A.b([B.aA,A.bo(A.b([A.u(k,A.bo(A.b([B.a
 i=A.u(k,k,B.f,k,k,new A.ay(B.j,k,k,B.fG,B.hw,k,k,B.v),k,180,k,k,k,k,k,k)
 n=A.dd(10)
 m=A.dd(100)
-return new A.fC("UMMC",B.L,new A.nR(A.f2(r,k,A.u(k,A.dC(!0,new A.bz(B.Dn,k,B.N,B.B,A.b([o,new A.bz(B.O,k,B.N,B.B,A.b([i,new A.eR(B.dK,k,k,A.u(k,A.ad(A.b([A.ct(A.bd(k,A.u(k,A.bo(A.b([B.a9B,A.af("Learn More About Us",k,k,k,A.a9(k,k,A.X(k,k,B.j,k,k,k,k,k,k,k,k,12,k,B.ad,k,k,!0,k,k,k,k,k,k,k,k)),k,k,k)],s),B.k,B.ao,B.i),B.f,k,k,new A.ay(B.R,k,k,m,k,k,k,B.v),k,40,k,B.hb,k,k,k,200),B.A,!1,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,new A.aIo(l),k,k,k,k,k,k),B.Z,k,k,k,k),B.a9G,new A.eR(B.S,k,k,new A.b4(250,k,A.af("We are happy that you are here! What are you most interested in today:",k,k,k,A.a9(k,k,A.X(k,k,B.j,k,k,k,k,k,k,k,k,12,k,B.ad,k,k,!0,k,k,k,k,k,k,k,k)),B.al,k,k),k),k)],s),B.k,B.r,B.i,k,B.o),B.f,k,k,new A.ay(B.y,k,k,n,k,k,k,B.v),k,150,k,new A.a1(0,115,0,0),k,k,k,310),k),new A.eR(B.dK,k,k,A.Xe(new A.b4(k,100,A.hw("assets/images/ummc_full_logo.jpg",300),k),"logo_splash"),k)],s),k)],s),k),B.I,!0),B.f,B.bw,k,k,k,j.a.b,k,k,k,k,k,k),B.c3,d,!0,new A.ht(k),B.bC,k),new A.aIp(),k),k)}}
+return new A.fC("UMMC",B.L,new A.nR(A.f2(r,k,A.u(k,A.dC(!0,new A.bz(B.Dn,k,B.N,B.B,A.b([o,new A.bz(B.O,k,B.N,B.B,A.b([i,new A.eR(B.dK,k,k,A.u(k,A.ad(A.b([A.ct(A.bd(k,A.u(k,A.bo(A.b([B.a9B,A.af("Learn More About Us",k,k,k,A.a9(k,k,A.X(k,k,B.j,k,k,k,k,k,k,k,k,12,k,B.ad,k,k,!0,k,k,k,k,k,k,k,k)),k,k,k)],s),B.k,B.ao,B.i),B.f,k,k,new A.ay(B.R,k,k,m,k,k,k,B.v),k,40,k,B.hb,k,k,k,200),B.A,!1,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,new A.aIo(l),k,k,k,k,k,k),B.Z,k,k,k,k),B.a9G,new A.eR(B.S,k,k,new A.b4(250,k,A.af("We are happy that you are here! What are you most interested in today:",k,k,k,A.a9(k,k,A.X(k,k,B.j,k,k,k,k,k,k,k,k,12,k,B.ad,k,k,!0,k,k,k,k,k,k,k,k)),B.al,k,k),k),k)],s),B.k,B.r,B.i,k,B.o),B.f,k,k,new A.ay(B.y,k,k,n,k,k,k,B.v),k,150,k,new A.a1(0,115,0,0),k,k,k,310),k),new A.eR(B.dK,k,k,A.Xe(new A.b4(k,100,A.hw("assets/images/ummc_logos_300.jpg",300),k),"logo_splash"),k)],s),k)],s),k),B.I,!0),B.f,B.bw,k,k,k,j.a.b,k,k,k,k,k,k),B.c3,d,!0,new A.ht(k),B.bC,k),new A.aIp(),k),k)}}
 A.aIv.prototype={
 $0(){var s=0,r=A.p(t.H),q=this,p,o,n
 var $async$$0=A.q(function(a,b){if(a===1)return A.m(b,r)
@@ -98464,7 +98464,7 @@ r=s?f:A.iv(f,B.j,0,B.bq,A.f_(f,f,B.rZ,f,new A.aLc(b),B.ai,f),f,f)
 q=g.at
 p=t.w
 o=b.p(p).f
-n=A.Xe(new A.b4(f,100,A.hw("assets/images/ummc_full_logo.jpg",300),f),"logo_splash")
+n=A.Xe(new A.b4(f,100,A.hw("assets/images/ummc_logos_300.jpg",300),f),"logo_splash")
 m=A.af("Welcome",f,f,f,A.a9(f,f,A.X(f,f,B.y,f,f,f,f,f,f,f,f,20,f,B.G,f,f,!0,f,f,f,f,f,f,f,f)),f,f,f)
 l=A.af("Sign in to continue",f,f,f,A.a9(f,f,A.X(f,f,B.u,f,f,f,f,f,f,f,f,11,f,B.G,f,f,!0,f,f,f,f,f,f,f,f)),f,f,f)
 k=b.p(p).f.a.a<=950?b.p(p).f.a.a*0.6:b.p(p).f.a.a*0.3
@@ -99183,7 +99183,7 @@ s=c.y
 r=s?b:A.iv(b,B.x,0,B.bq,A.f_(b,b,B.rZ,b,new A.aPH(a0),B.ai,b),b,b)
 q=t.w
 p=a0.p(q).f
-o=A.Xe(new A.b4(b,100,A.hw("assets/images/ummc_full_logo.jpg",300),b),"logo_splash")
+o=A.Xe(new A.b4(b,100,A.hw("assets/images/ummc_logos_300.jpg",300),b),"logo_splash")
 n=A.bd(b,A.af("Sign up",b,b,b,A.a9(b,b,A.X(b,b,B.y,b,b,b,b,b,b,b,b,20,b,B.G,b,b,!0,b,b,b,b,b,b,b,b)),b,b,b),B.A,!1,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,new A.aPI(),b,b,b,b,b,b)
 m=A.af("Complete the form to Sign up",b,b,b,A.a9(b,b,A.X(b,b,B.u,b,b,b,b,b,b,b,b,11,b,B.G,b,b,!0,b,b,b,b,b,b,b,b)),b,b,b)
 l=a0.p(q).f.a.a<=950?a0.p(q).f.a.a*0.6:a0.p(q).f.a.a*0.3
@@ -99521,7 +99521,7 @@ this.aFs()},
 aFs(){A.cp(B.dW,new A.aRG(this))},
 C(a,b){var s=null,r=t.w,q=b.p(r).f
 r=b.p(r).f
-return new A.fC("UMMC",B.K,A.f2(s,s,A.u(s,A.ad(A.b([A.Xe(new A.b4(s,300,A.hw("assets/images/ummc_full_logo.jpg",300),s),"logo_splash")],t.p),B.k,B.ao,B.i,s,B.o),B.f,B.j,s,s,s,q.a.b,s,s,B.Qc,s,s,r.a.a),s,s,!1,s,s,!0),s)}}
+return new A.fC("UMMC",B.K,A.f2(s,s,A.u(s,A.ad(A.b([A.Xe(new A.b4(s,300,A.hw("assets/images/ummc_logos_300.jpg",300),s),"logo_splash")],t.p),B.k,B.ao,B.i,s,B.o),B.f,B.j,s,s,s,q.a.b,s,s,B.Qc,s,s,r.a.a),s,s,!1,s,s,!0),s)}}
 A.aRG.prototype={
 $0(){var s=0,r=A.p(t.H),q=this,p,o,n,m
 var $async$$0=A.q(function(a,b){if(a===1)return A.m(b,r)
