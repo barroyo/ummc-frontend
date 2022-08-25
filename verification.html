@@ -11,8 +11,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="ummc">
     <link rel="apple-touch-icon" href="https://jolly-island-00d2f1810.1.azurestaticapps.net/icons/Icon-192.png">
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://jolly-island-00d2f1810.1.azurestaticapps.net/favicon.png">
-    <title>UMMC - Email verification</title>
+    <title>UMMC - email verification</title>
     <meta name="description" content="">
     <meta name="apple-itunes-app"
         content="app-id=1515987544, app-argument=https://apps.apple.com/us/app/department-of-surgery-at-ummc/id1515987544">
@@ -85,8 +86,8 @@
         .checkmark {
             position: absolute;
             transform: rotate(45deg) translate(-50%, -50%);
-            left: 35%;
-            top: 45%;
+            left: 34%;
+            top: 50%;
             height: 8px;
             width: 3px;
             border-bottom: 3px solid white;
@@ -95,12 +96,11 @@
         .checkmark-error {
             position: absolute;
             transform: rotate(0deg) translate(-50%, -50%);
-            left: 49%;
+            left: 50%;
             top: 50%;
             height: 0px;
             width: 15px;
             border-bottom: 3px solid white;
-            border-right: 3px solid white;
         }
         .loading-overlay {
             position: fixed;
@@ -131,6 +131,7 @@
             0% {
                 transform: rotate(0deg);
             }
+
             100% {
                 transform: rotate(360deg);
             }
@@ -140,6 +141,55 @@
         }
         .show {
             display: block;
+        }
+        .input-style {
+            font-size: 18px;
+            font-family: system-ui;
+            color: #8e8e8e;
+            border-radius: 10px 10px 0px 0px;
+            padding: 9px;
+            width: 97%;
+            border: 2px solid #eaeaea;
+            border-bottom: 2px solid #173f88;
+            background: #fafafa;
+        }
+        input:focus {
+            outline: none;
+        }
+        label {
+            font-size: 18px;
+            font-family: system-ui;
+            color: #8e8e8e;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input[type=submit] {
+            background-color: #173f88;
+            border: none;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            border-radius: 19px;
+            font-weight: bold;
+            font-family: system-ui;
+            width: 100px;
+        }
+        .button-content {
+            text-align: end;
+        }
+        input[type="submit"]:hover {
+            background-color: #0c295d;
+        }
+        input[type="submit"]:active {
+            background-color: #173f88;
+        }
+        .error-input {
+            color: #fa7769;
+            font-size: 15px;
         }
     </style>
 </head>
@@ -155,22 +205,49 @@
                     <div class="circle">
                         <div class="checkmark"></div>
                     </div>
-                    <p class="font-style">Thank you! You have successfully verified your email. For an optimal
+                    <p id="successfully-verification" class="font-style hidden">Thank you! You have successfully
+                        verified your
+                        email. For an optimal
                         experience,
                         we recommend using
                         either the android
                         or iOS app to access the HIV CARES application. However, you can also click <a
-                            href="https://jolly-island-00d2f1810.1.azurestaticapps.net/#/">here</a> to access the
+                            id="website-link">here</a> to access the
                         website
                         instead.
+                    </p>
+                    <p id="successfully-email-sent" class="font-style hidden">We've sent you and email that contains a
+                        link to
+                        complete your registration. <span>Please check your spam inbox if you can't find
+                            it.</span><br><br>
+                        <span><a id="login-link">Sign in now</a> |
+                            <a id="verification-link" href="?verification=true">Resend
+                                verification email</a></span>
                     </p>
                 </div>
                 <div id="failed-content" class="hidden">
                     <div class="circle-error">
                         <div class="checkmark-error"></div>
                     </div>
-                    <p class="font-style">Sorry, email verification failed. you may need to request another
-                        verification email.</p>
+                    <p id="invalid-token" class="font-style hidden">The email verification failed. Please request a new
+                        verification email
+                        <a href="?verification=true">here</a>.
+                    </p>
+                    <p id="wrong-link" class="font-style hidden">Wrong Link. You have clicked on an invalid link. Please
+                        make sure that
+                        you
+                        have typed the link correctly. Please request a new verification email
+                        <a href="?verification=true">here</a>.
+                    </p>
+                </div>
+                <div id="send-verification-email" class="hidden">
+                    <p class="font-style">Resend verification email, please enter your email address.</p>
+                    <form id="email-form" action="#">
+                        <label>Email Address*</label>
+                        <input type="email" id="email" class="input-style" type="text" name="email" autocomplete="off"
+                            autofocus required>
+                        <div class="button-content"><input type="submit" value="Submit"></div>
+                    </form>
                 </div>
                 <!-- <div id="device-app"></div> -->
             </div>
@@ -181,6 +258,8 @@
          * Page setting
          */
         var apiUrl = 'https://ummcapi.azurewebsites.net';
+        var loginLink = 'https://jolly-island-00d2f1810.1.azurestaticapps.net';
+        // var apiUrl = 'http://localhost:3000';
         /*****************************************/
         /**
          * Determine the mobile operating system.
@@ -203,8 +282,9 @@
          * Show result div
          *
          */
-        function showResult(element, className) {
-            element.setAttribute("class", className);
+        function showElement(element, show) {
+            //element.setAttribute("class", className);
+            show ? element.classList.remove("hidden") : element.classList.add("hidden");
         }
         /**
          * Show result div
@@ -223,7 +303,7 @@
             const params = new Proxy(new URLSearchParams(window.location.search), {
                 get: (searchParams, prop) => searchParams.get(prop),
             });
-            let tokenValue = params.token;
+            const tokenValue = params.token;
             if (tokenValue) {
                 try {
                     showLoading(true);
@@ -233,34 +313,103 @@
                     const result = await fetch(verifyEmailEndpoint, { method: 'POST' });
                     if (result.status === 200 || result.status === 204) {
                         const successfullyElement = document.getElementById('successfully-content');
+                        const successfullyEmailVerificationElement = document.getElementById('successfully-verification');
+                        const successfullyEmailSentElement = document.getElementById('successfully-email-sent');
                         const failedElement = document.getElementById('failed-content');
-                        showResult(successfullyElement, 'show');
-                        showResult(failedElement, 'hidden');
+                        showElement(successfullyElement, true);
+                        showElement(successfullyEmailVerificationElement, true);
+                        showElement(successfullyEmailSentElement, false);
+                        showElement(failedElement, false);
                         showLoading(false);
                     }
                     else {
                         const successfullyElement = document.getElementById('successfully-content');
                         const failedElement = document.getElementById('failed-content');
-                        showResult(successfullyElement, 'hidden');
-                        showResult(failedElement, 'show');
+                        const invalidTokenElement = document.getElementById('invalid-token');
+                        showElement(successfullyElement, false);
+                        showElement(failedElement, true);
+                        showElement(invalidTokenElement, true);
                         showLoading(false);
                     }
                 } catch (error) {
                     console.log(error);
                     const successfullyElement = document.getElementById('successfully-content');
                     const failedElement = document.getElementById('failed-content');
-                    showResult(successfullyElement, 'hidden');
-                    showResult(failedElement, 'show');
+                    const invalidTokenElement = document.getElementById('invalid-token');
+                    showElement(successfullyElement, false);
+                    showElement(failedElement, true);
+                    showElement(invalidTokenElement, true);
+                    invalidTokenElement.innerHTML = "Sorry an internal error occurred, please try again later."
                     showLoading(false);
                 }
             }
-            else {
+            else if (params.verification) {
+                showElement(document.getElementById('send-verification-email'), true);
+                document.getElementById('email-form').onsubmit = async function (event) {
+                    event.preventDefault();
+                    try {
+                        showLoading(true);
+                        const sendVerificationEmailEndpoint = apiUrl + '/v1/auth/send-verification-email-by-email';
+
+                        const result = await fetch(sendVerificationEmailEndpoint, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            }, body: JSON.stringify({ email: email.value })
+                        });
+                        if (result.status === 200 || result.status === 204) {
+                            const successfullyElement = document.getElementById('successfully-content');
+                            const successfullyEmailVerificationElement = document.getElementById('successfully-verification');
+                            const successfullyEmailSentElement = document.getElementById('successfully-email-sent');
+                            const failedElement = document.getElementById('failed-content');
+                            const sendVerificationEmailElement = document.getElementById('send-verification-email');
+                            showElement(successfullyElement, true);
+                            showElement(successfullyEmailVerificationElement, false);
+                            showElement(successfullyEmailSentElement, true);
+                            showElement(failedElement, false);
+                            showElement(sendVerificationEmailElement, false);
+                            showLoading(false);
+                        }
+                        else {
+                            const successfullyElement = document.getElementById('successfully-content');
+                            const failedElement = document.getElementById('failed-content');
+                            const invalidTokenElement = document.getElementById('invalid-token');
+                            showElement(successfullyElement, false);
+                            showElement(failedElement, true);
+                            showElement(invalidTokenElement, true);
+                            var data = await result.json();
+                            invalidTokenElement.innerHTML = data.message;
+                            invalidTokenElement.classList.add("error-input");
+                            showLoading(false);
+                        }
+                    } catch (error) {
+                        console.log(error);
+                        const successfullyElement = document.getElementById('successfully-content');
+                        const failedElement = document.getElementById('failed-content');
+                        const invalidTokenElement = document.getElementById('invalid-token');
+                        showElement(successfullyElement, false);
+                        showElement(failedElement, true);
+                        showElement(invalidTokenElement, true);
+                        invalidTokenElement.innerHTML = "Sorry an internal error occurred, please try again later."
+                        invalidTokenElement.classList.add("error-input");
+                        showLoading(false);
+                    }
+                };
+            } else {
                 const successfullyElement = document.getElementById('successfully-content');
                 const failedElement = document.getElementById('failed-content');
-                showResult(successfullyElement, 'hidden');
-                showResult(failedElement, 'show');
+                const wrongLinkElement = document.getElementById('wrong-link');
+                showElement(successfullyElement, false);
+                showElement(failedElement, true);
+                showElement(wrongLinkElement, true);
                 showLoading(false);
             }
+            // links
+            const loginLinkElement = document.getElementById('login-link');
+            const verificationLinkElement = document.getElementById('verification-link');
+            const websiteLinkElement = document.getElementById('website-link');
+            loginLinkElement.href = loginLink + '/#/login';
+            websiteLinkElement.href = loginLink;
         })();
     </script>
 </body>
