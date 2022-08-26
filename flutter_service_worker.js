@@ -5,11 +5,11 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "b444891081f7bd946c064e7a10c2322a",
 "icon.png": "5732bc9a0d0ec1944fae55bd835ba947",
-"index.html": "0bdbf825841192a210b534aeccfa96e2",
-"/": "0bdbf825841192a210b534aeccfa96e2",
-"verification.html": "ca8cd91ca0b44e9439196c1d836936de",
+"index.html": "7499a9608af70c207bb6af02824a0be5",
+"/": "7499a9608af70c207bb6af02824a0be5",
+"verification.html": "b5b03df0c59197c0093fdf5b7f6b6bcd",
 "firebase-messaging-sw.js": "d6c4e6ba766a9cc188d27bb7e4f96445",
-"main.dart.js": "b458beafcb448fcf10d84a222a3c33df",
+"main.dart.js": "3d72bcb12634bf92b8a7ec7f2732f56a",
 "logo_splash.png": "5b25f048e71a028c3d654e827245183f",
 "favicon.png": "0fe38434e2598b61d489824b6e69896b",
 "icons/Icon-192.png": "5732bc9a0d0ec1944fae55bd835ba947",
@@ -39,7 +39,8 @@ const RESOURCES = {
 "assets/assets/images/ummc_logos_300.jpg": "9cf9cc5594a274b7afb8839cdbed0800",
 "assets/assets/images/logo_app_bar2.svg": "4547112ed318af59df3347c04e787514",
 "assets/assets/images/treatment_item.png": "ffcf3cb8c23a6131a32914e38f49e49b",
-"assets/assets/fonts/montserrat/Montserrat-SemiBold.ttf": "7ffeec2b4edb434d393875ffbe633c30"
+"assets/assets/fonts/montserrat/Montserrat-SemiBold.ttf": "7ffeec2b4edb434d393875ffbe633c30",
+"apple-app-store-badge.svg": "2928664fe1fc6aca88583a6f606d60ba"
 };
 
 // The application shell files that are downloaded before a service worker can

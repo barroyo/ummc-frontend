@@ -2,22 +2,27 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="ummc">
     <link rel="apple-touch-icon" href="https://jolly-island-00d2f1810.1.azurestaticapps.net/icons/Icon-192.png">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://jolly-island-00d2f1810.1.azurestaticapps.net/favicon.png">
     <title>UMMC - email verification</title>
     <meta name="description" content="">
+    <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
     <meta name="apple-itunes-app"
         content="app-id=1515987544, app-argument=https://apps.apple.com/us/app/department-of-surgery-at-ummc/id1515987544">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
         .outer {
             display: table;
@@ -29,10 +34,12 @@
             --tw-bg-opacity: 1;
             background-color: #d9ebfb;
         }
+
         .middle {
             display: table-cell;
             vertical-align: middle;
         }
+
         .inner {
             margin-left: auto;
             margin-right: auto;
@@ -43,28 +50,47 @@
             --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
         }
+
         @media only screen and (max-width: 600px) {
             .inner {
                 width: 80%;
             }
+
+            .input-style {
+                width: 94% !important;
+            }
+
+            .center-img {
+                width: 85% !important;
+            }
+
+            .android-badge {
+                width: 176px !important;
+            }
+
         }
+
         .center-img {
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 50%;
             margin-bottom: 15px;
+            padding-bottom: 30px;
         }
+
         .font-style {
             font-size: 18px;
-            font-family: system-ui;
-            text-align: justify;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
             color: #8e8e8e;
         }
+
         .font-style a {
             color: #184f98;
             font-weight: bold;
         }
+
         .circle {
             position: relative;
             background: #64ce74;
@@ -74,6 +100,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .circle-error {
             position: relative;
             background: #f76;
@@ -83,6 +110,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .checkmark {
             position: absolute;
             transform: rotate(45deg) translate(-50%, -50%);
@@ -93,6 +121,7 @@
             border-bottom: 3px solid white;
             border-right: 3px solid white;
         }
+
         .checkmark-error {
             position: absolute;
             transform: rotate(0deg) translate(-50%, -50%);
@@ -102,6 +131,7 @@
             width: 15px;
             border-bottom: 3px solid white;
         }
+
         .loading-overlay {
             position: fixed;
             width: 100%;
@@ -112,10 +142,12 @@
             background: rgba(255, 255, 255, 0.7);
             z-index: 9998;
         }
+
         .lds-dual-ring {
             display: flex;
             margin: 0 auto;
         }
+
         .lds-dual-ring:after {
             content: " ";
             display: block;
@@ -127,6 +159,7 @@
             border-color: #173f88 transparent #173f88 transparent;
             animation: lds-dual-ring 1.2s linear infinite;
         }
+
         @keyframes lds-dual-ring {
             0% {
                 transform: rotate(0deg);
@@ -136,15 +169,18 @@
                 transform: rotate(360deg);
             }
         }
+
         .hidden {
             display: none;
         }
+
         .show {
             display: block;
         }
+
         .input-style {
             font-size: 18px;
-            font-family: system-ui;
+            font-family: 'Montserrat', sans-serif;
             color: #8e8e8e;
             border-radius: 10px 10px 0px 0px;
             padding: 9px;
@@ -153,16 +189,19 @@
             border-bottom: 2px solid #173f88;
             background: #fafafa;
         }
+
         input:focus {
             outline: none;
         }
+
         label {
             font-size: 18px;
-            font-family: system-ui;
+            font-family: 'Montserrat', sans-serif;
             color: #8e8e8e;
             margin-bottom: 5px;
             display: block;
         }
+
         input[type=submit] {
             background-color: #173f88;
             border: none;
@@ -175,47 +214,75 @@
             margin: 4px 2px;
             border-radius: 19px;
             font-weight: bold;
-            font-family: system-ui;
+            font-family: 'Montserrat', sans-serif;
             width: 100px;
         }
+
         .button-content {
             text-align: end;
         }
+
         input[type="submit"]:hover {
             background-color: #0c295d;
         }
+
         input[type="submit"]:active {
             background-color: #173f88;
         }
+
         .error-input {
             color: #fa7769;
             font-size: 15px;
         }
+
+        .android-badge {
+            width: 190px;
+        }
+
+        .ios-badge {
+            width: 153px;
+            margin-bottom: 11px;
+        }
     </style>
 </head>
+
 <body>
+
     <div id="loading" class="loading-overlay hidden">
         <div class="lds-dual-ring"></div>
     </div>
+
     <div class="outer">
         <div class="middle">
             <div class="inner">
-                <img src="logo_splash.png" class="center-img" />
+                <img src="https://jolly-island-00d2f1810.1.azurestaticapps.net/logo_splash.png" class="center-img" />
+
                 <div id="successfully-content" class="hidden">
                     <div class="circle">
                         <div class="checkmark"></div>
                     </div>
-                    <p id="successfully-verification" class="font-style hidden">Thank you! You have successfully
-                        verified your
-                        email. For an optimal
-                        experience,
-                        we recommend using
-                        either the android
-                        or iOS app to access the HIV CARES application. However, you can also click <a
-                            id="website-link">here</a> to access the
-                        website
-                        instead.
-                    </p>
+                    <div id="successfully-verification" class="font-style hidden">
+
+                        <p>Thank you! You have successfully
+                            verified your email. For the best experience, we recommend using either the android or
+                            iOS app to access the HIV CARES application.
+                        </p>
+
+                        <a id="android-app-link" target="_blank">
+                            <img alt='Get it on Google Play'
+                                src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'
+                                class="android-badge" /></a>
+
+                        <a id="ios-app-link" target="_blank">
+                            <img alt='Download on the App Store'
+                                src='https://jolly-island-00d2f1810.1.azurestaticapps.net/apple-app-store-badge.svg'
+                                class="ios-badge" /></a>
+
+                        <p>However, you can also <a id="website-link">click here</a> to access
+                            the website instead.</p>
+
+                    </div>
+
                     <p id="successfully-email-sent" class="font-style hidden">We've sent you and email that contains a
                         link to
                         complete your registration. <span>Please check your spam inbox if you can't find
@@ -225,42 +292,53 @@
                                 verification email</a></span>
                     </p>
                 </div>
+
                 <div id="failed-content" class="hidden">
                     <div class="circle-error">
                         <div class="checkmark-error"></div>
                     </div>
-                    <p id="invalid-token" class="font-style hidden">The email verification failed. Please request a new
-                        verification email
+
+                    <p id="invalid-token" class="font-style hidden">
+                        The email verification failed. Please request a new verification link
                         <a href="?verification=true">here</a>.
                     </p>
+
                     <p id="wrong-link" class="font-style hidden">Wrong Link. You have clicked on an invalid link. Please
                         make sure that
                         you
                         have typed the link correctly. Please request a new verification email
                         <a href="?verification=true">here</a>.
                     </p>
+
                 </div>
+
                 <div id="send-verification-email" class="hidden">
                     <p class="font-style">Resend verification email, please enter your email address.</p>
                     <form id="email-form" action="#">
                         <label>Email Address*</label>
-                        <input type="email" id="email" class="input-style" type="text" name="email" autocomplete="off"
-                            autofocus required>
+                        <input type="email" id="email" class="input-style" name="email" autocomplete="off" autofocus
+                            required>
                         <div class="button-content"><input type="submit" value="Submit"></div>
+
                     </form>
                 </div>
                 <!-- <div id="device-app"></div> -->
             </div>
         </div>
     </div>
+
     <script>
         /**
          * Page setting
          */
         var apiUrl = 'https://ummcapi.azurewebsites.net';
         var loginLink = 'https://jolly-island-00d2f1810.1.azurestaticapps.net';
+        var androidAppUrl = 'https://play.google.com/store/apps/details?id=com.app_depsurgummcapp.layout&hl=en&gl=US';
+        var iosAppUrl = 'https://apps.apple.com/us/app/department-of-surgery-at-ummc/id1515987544';
         // var apiUrl = 'http://localhost:3000';
+
         /*****************************************/
+
         /**
          * Determine the mobile operating system.
          * This function returns one of 'iOS', 'Android' or 'unknown'.
@@ -269,15 +347,19 @@
          */
         function getMobileOperatingSystem() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
             if (/android/i.test(userAgent)) {
                 return "Android";
             }
+
             // iOS detection from: http://stackoverflow.com/a/9039885/177710
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                 return "iOS";
             }
+
             return "";
         }
+
         /**
          * Show result div
          *
@@ -286,6 +368,7 @@
             //element.setAttribute("class", className);
             show ? element.classList.remove("hidden") : element.classList.add("hidden");
         }
+
         /**
          * Show result div
          *
@@ -294,22 +377,27 @@
             var element = document.getElementById("loading");
             show ? element.classList.remove("hidden") : element.classList.add("hidden");
         }
+
         (async function () {
             const deviceAppElement = document.getElementById('device-app');
             if (deviceAppElement) {
                 deviceAppElement.innerHTML = getMobileOperatingSystem();
             }
+
             // Get query params
             const params = new Proxy(new URLSearchParams(window.location.search), {
                 get: (searchParams, prop) => searchParams.get(prop),
             });
+
             const tokenValue = params.token;
             if (tokenValue) {
+
                 try {
                     showLoading(true);
                     const verifyEmailEndpoint = apiUrl + '/v1/auth/verify-email?' + new URLSearchParams({
                         token: tokenValue
                     });
+
                     const result = await fetch(verifyEmailEndpoint, { method: 'POST' });
                     if (result.status === 200 || result.status === 204) {
                         const successfullyElement = document.getElementById('successfully-content');
@@ -357,6 +445,7 @@
                                 'Content-Type': 'application/json'
                             }, body: JSON.stringify({ email: email.value })
                         });
+
                         if (result.status === 200 || result.status === 204) {
                             const successfullyElement = document.getElementById('successfully-content');
                             const successfullyEmailVerificationElement = document.getElementById('successfully-verification');
@@ -394,6 +483,7 @@
                         invalidTokenElement.classList.add("error-input");
                         showLoading(false);
                     }
+
                 };
             } else {
                 const successfullyElement = document.getElementById('successfully-content');
@@ -404,13 +494,22 @@
                 showElement(wrongLinkElement, true);
                 showLoading(false);
             }
+
             // links
             const loginLinkElement = document.getElementById('login-link');
             const verificationLinkElement = document.getElementById('verification-link');
             const websiteLinkElement = document.getElementById('website-link');
+            const androidLinkElement = document.getElementById('android-app-link');
+            const iosLinkElement = document.getElementById('ios-app-link');
+
             loginLinkElement.href = loginLink + '/#/login';
             websiteLinkElement.href = loginLink;
+            androidLinkElement.href = androidAppUrl;
+            iosLinkElement.href = iosAppUrl;
         })();
+
+
     </script>
 </body>
+
 </html>
