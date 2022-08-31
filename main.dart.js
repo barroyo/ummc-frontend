@@ -101832,41 +101832,42 @@ s=1
 break}case 5:case 1:return A.n(q,r)}})
 return A.o($async$zg,r)},
 zW(a,b,c){return this.a5s(a,b,c)},
-a5s(a,a0,a1){var s=0,r=A.p(t.z),q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b
-var $async$zW=A.q(function(a2,a3){if(a2===1)return A.m(a3,r)
+a5s(a0,a1,a2){var s=0,r=A.p(t.z),q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a
+var $async$zW=A.q(function(a3,a4){if(a3===1)return A.m(a4,r)
 while(true)switch(s){case 0:A.eR("thread")
-A.eR(a0)
-p=t.N
+A.eR(a1)
+p="https://ummcapi.azurewebsites.net/v1"+("/threads/"+a1+"?maxPageSize=9")
+o=t.N
 s=3
-return A.l(A.jB(A.bB("https://ummcapi.azurewebsites.net/v1"+("/threads/"+a0+"?maxPageSize=10")+"&nextPage="+a1,0,null),A.C(["Content-Type","application/json","Authorization",a.Q+" "+a.as],p,p)),$async$zW)
-case 3:o=a3
-n=o.b
-if(n===200){m=B.w.c8(0,A.ci(J.w(A.ch(o.e).c.a,"charset")).aF(0,o.w),null)
-n=J.U(m)
-l=J.bU(n.h(m,"nextPage"))
-j=0
-while(!0){if(!(j<J.b6(n.h(m,"participants")))){k=""
-break}if(J.h(J.w(J.w(n.h(m,"participants"),j),"role"),"user")){k=J.w(J.w(J.w(n.h(m,"participants"),j),"id"),"communicationUserId")
-break}++j}i=A.b([],t.n_)
-for(j=0;j<J.b6(n.h(m,"messages"));++j)if(J.w(J.w(n.h(m,"messages"),j),"sender")!=null){h=new A.ni()
-h.a=J.w(J.w(n.h(m,"messages"),j),"id")
-h.d=A.bI(J.w(J.w(n.h(m,"messages"),j),"sequenceId"),null)
-h.w=J.h(J.w(J.w(n.h(m,"messages"),j),"status"),"read")&&!0
-g=new A.cs(Date.now(),!1).gvG().j(0)
-f=A.bI(g.split(":")[0],null)*60
-e=A.bI(g.split(":")[1],null)*60
-e=(f===0?1/f<0:f<0)?f+-e:f+e
-d=A.mZ(J.w(J.w(n.h(m,"messages"),j),"createdOn"))
-c=d.a+B.h.bF(6e7*e,1000)
-d=d.b
-b=new A.cs(c,d)
-b.Rk(c,d)
-h.e=b
-h.f=J.w(J.w(J.w(n.h(m,"messages"),j),"content"),"message")
-h.b=J.h(J.w(J.w(J.w(n.h(m,"messages"),j),"sender"),"communicationUserId"),k)?"user":"coordinator"
-i.push(h)}q=A.C(["nextPage",l,"messages",i],p,t.K)
+return A.l(A.jB(A.bB(a2!==""?p+"&nextPage="+a2:p,0,null),A.C(["Content-Type","application/json","Authorization",a0.Q+" "+a0.as],o,o)),$async$zW)
+case 3:n=a4
+m=n.b
+if(m===200&&a2!=="null"){l=B.w.c8(0,A.ci(J.w(A.ch(n.e).c.a,"charset")).aF(0,n.w),null)
+m=J.U(l)
+k=J.bU(m.h(l,"nextPage"))
+i=0
+while(!0){if(!(i<J.b6(m.h(l,"participants")))){j=""
+break}if(J.h(J.w(J.w(m.h(l,"participants"),i),"role"),"user")){j=J.w(J.w(J.w(m.h(l,"participants"),i),"id"),"communicationUserId")
+break}++i}h=A.b([],t.n_)
+for(i=0;i<J.b6(m.h(l,"messages"));++i)if(J.w(J.w(m.h(l,"messages"),i),"sender")!=null){g=new A.ni()
+g.a=J.w(J.w(m.h(l,"messages"),i),"id")
+g.d=A.bI(J.w(J.w(m.h(l,"messages"),i),"sequenceId"),null)
+g.w=J.h(J.w(J.w(m.h(l,"messages"),i),"status"),"read")&&!0
+f=new A.cs(Date.now(),!1).gvG().j(0)
+e=A.bI(f.split(":")[0],null)*60
+d=A.bI(f.split(":")[1],null)*60
+d=(e===0?1/e<0:e<0)?e+-d:e+d
+c=A.mZ(J.w(J.w(m.h(l,"messages"),i),"createdOn"))
+b=c.a+B.h.bF(6e7*d,1000)
+c=c.b
+a=new A.cs(b,c)
+a.Rk(b,c)
+g.e=a
+g.f=J.w(J.w(J.w(m.h(l,"messages"),i),"content"),"message")
+g.b=J.h(J.w(J.w(J.w(m.h(l,"messages"),i),"sender"),"communicationUserId"),j)?"user":"coordinator"
+h.push(g)}q=A.C(["nextPage",k,"messages",h],o,t.K)
 s=1
-break}else if(n>=400){q=A.C(["title","Error","message",A.j(J.w(B.w.c8(0,A.ci(J.w(A.ch(o.e).c.a,"charset")).aF(0,o.w),null),"message")),"status",n],p,t.K)
+break}else if(m>=400){q=A.C(["title","Error","message",A.j(J.w(B.w.c8(0,A.ci(J.w(A.ch(n.e).c.a,"charset")).aF(0,n.w),null),"message")),"status",m],o,t.K)
 s=1
 break}case 1:return A.n(q,r)}})
 return A.o($async$zW,r)},
