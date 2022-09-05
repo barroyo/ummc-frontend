@@ -14,8 +14,7 @@ importScripts('https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js')
   const messaging = firebase.messaging();
 
   messaging.onBackgroundMessage(function (payload) {
-    
-    clients
+    const promiseChain = clients
         .matchAll({
             type: "window",
             includeUncontrolled: true
@@ -26,5 +25,5 @@ importScripts('https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js')
                 windowClient.postMessage('skipWaiting');
             }
         });
-    // return promiseChain;
+    return promiseChain;
 });

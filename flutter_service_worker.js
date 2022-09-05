@@ -5,12 +5,11 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "b444891081f7bd946c064e7a10c2322a",
 "icon.png": "5732bc9a0d0ec1944fae55bd835ba947",
-"index.html": "b149d1f2cf79db480f93d4ab1606be88",
-"/": "b149d1f2cf79db480f93d4ab1606be88",
+"index.html": "24be5627a3b4f8f7063bb96577fa5a85",
+"/": "24be5627a3b4f8f7063bb96577fa5a85",
 "verification.html": "da9a3e593eaac6c4c227e8b8435afb36",
-"firebase-messaging-sw.js": "37c500a8ac0b0edfddc60196a190b27f",
+"firebase-messaging-sw.js": "3afe6d49855776a16f4c507fccb79fc7",
 "main.dart.js": "7cc6333accc94deec64e2b7a06c77dbf",
-"flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
 "logo_splash.png": "5b25f048e71a028c3d654e827245183f",
 "favicon.png": "0fe38434e2598b61d489824b6e69896b",
 "icons/Icon-192.png": "5732bc9a0d0ec1944fae55bd835ba947",
@@ -42,11 +41,7 @@ const RESOURCES = {
 "assets/assets/images/logo_app_bar2.svg": "4547112ed318af59df3347c04e787514",
 "assets/assets/images/treatment_item.png": "ffcf3cb8c23a6131a32914e38f49e49b",
 "assets/assets/fonts/montserrat/Montserrat-SemiBold.ttf": "7ffeec2b4edb434d393875ffbe633c30",
-"apple-app-store-badge.svg": "2928664fe1fc6aca88583a6f606d60ba",
-"canvaskit/canvaskit.js": "2bc454a691c631b07a9307ac4ca47797",
-"canvaskit/profiling/canvaskit.js": "38164e5a72bdad0faa4ce740c9b8e564",
-"canvaskit/profiling/canvaskit.wasm": "95a45378b69e77af5ed2bc72b2209b94",
-"canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62"
+"apple-app-store-badge.svg": "2928664fe1fc6aca88583a6f606d60ba"
 };
 
 // The application shell files that are downloaded before a service worker can
