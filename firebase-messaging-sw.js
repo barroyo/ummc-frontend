@@ -1,6 +1,5 @@
 importScripts('https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js');
-importScripts('functions.js');
 
    /*Update with yours config*/
   const firebaseConfig = {
@@ -14,8 +13,18 @@ importScripts('functions.js');
   firebase.initializeApp(firebaseConfig);
   const messaging = firebase.messaging();
 
-  messaging.onBackgroundMessage((message) => {
-    reloadPage();
-    console.log("onBackgroundMessage", message);
-  });
-  
+  messaging.onBackgroundMessage(function (payload) {
+    
+    clients
+        .matchAll({
+            type: "window",
+            includeUncontrolled: true
+        })
+        .then(windowClients => {
+            for (let i = 0; i < windowClients.length; i++) {
+                const windowClient = windowClients[i];
+                windowClient.postMessage('skipWaiting');
+            }
+        });
+    // return promiseChain;
+});

@@ -40,8 +40,8 @@
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
-  
- 
+
+
   <script>
     // Your web app's Firebase configuration
     const firebaseConfig = {
@@ -56,9 +56,9 @@
     firebase.initializeApp(firebaseConfig);
   </script>
   <script>
-    var serviceWorkerVersion = '634003763';
+    var serviceWorkerVersion = '458251722';
     var scriptLoaded = false;
-    
+
     function loadMainDartJs() {
       if (scriptLoaded) {
         return;
@@ -71,17 +71,16 @@
     }
 
     if ('serviceWorker' in navigator) {
-      // Service workers are supported. Use them.
       window.addEventListener('load', function () {
-        // Wait for registration to finish before dropping the <script> tag.
-        // Otherwise, the browser will load the script multiple times,
-        // potentially different versions.
+        var refreshing = false;
         var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
         navigator.serviceWorker.register(serviceWorkerUrl)
           .then((reg) => {
+            
             function waitForActivation(serviceWorker) {
               serviceWorker.addEventListener('statechange', () => {
                 if (serviceWorker.state == 'activated') {
+
                   console.log('Installed new service worker.');
                   loadMainDartJs();
                 }
@@ -104,26 +103,22 @@
             }
           });
 
-        // If service worker doesn't succeed in a reasonable amount of time,
-        // fallback to plaint <script> tag.
-        // setTimeout(() => {
-        //   if (!scriptLoaded) {
-        //     console.warn(
-        //       'Failed to load app from service worker. Falling back to plain <script> tag.',
-        //     );
-        //     loadMainDartJs();
-        //   }
-        // }, 4000);
       });
+
     } else {
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
   </script>
+  
   <script>
     if ('serviceWorker' in navigator) {
+      //navigator.serviceWorker.register('/firebase-messaging-sw.js');
       window.addEventListener('load',function () {
         navigator.serviceWorker.register('/firebase-messaging-sw.js');
+        navigator.serviceWorker.addEventListener('message', messageEvent => {
+          if (messageEvent.data === 'skipWaiting') return window.location.reload();
+        });
       });
     }
   </script>
