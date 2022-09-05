@@ -25,5 +25,9 @@ importScripts('https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js')
                 windowClient.postMessage('skipWaiting');
             }
         });
+        self.registration.update();
     return promiseChain;
+});
+self.addEventListener('notificationclick', function (event) {
+    console.log('notification received: ', event)
 });

@@ -56,7 +56,7 @@
     firebase.initializeApp(firebaseConfig);
   </script>
   <script>
-    var serviceWorkerVersion = '945155817';
+    var serviceWorkerVersion = '118268255';
     var scriptLoaded = false;
 
     function loadMainDartJs() {
@@ -112,10 +112,23 @@
   </script>
   
   <script>
+    var serviceWorkerVersion = null;
+    var scriptLoaded = false;
+
+    function loadMainDartJs() {
+      if (scriptLoaded) {
+        return;
+      }
+      scriptLoaded = true;
+      var scriptTag = document.createElement('script');
+      scriptTag.src = 'main.dart.js';
+      scriptTag.type = 'application/javascript';
+      document.body.append(scriptTag);
+    }
     if ('serviceWorker' in navigator) {
       //navigator.serviceWorker.register('/firebase-messaging-sw.js');
       window.addEventListener('load',function () {
-        navigator.serviceWorker.register('/firebase-messaging-sw.js').then((reg) => {
+        navigator.serviceWorker.register('/firebase-messaging-sw.js?v=' + serviceWorkerVersion).then((reg) => {
             
             function waitForActivation(serviceWorker) {
               serviceWorker.addEventListener('statechange', () => {
